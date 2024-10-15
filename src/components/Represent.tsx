@@ -4,17 +4,17 @@ import Button from './Button'
 
 const Represent = () => {
   return (
-    <section className='relative md:flex flex-row text-white pt-12 container bg-dimWhite'>
-      <div className="w-full md:w-3/4 h-screen">
+    <section className='relative md:flex flex-row text-white py-12 container bg-dimWhite'>
+      <div className="w-full md:w-3/4 md:h-screen">
         <img src={stressFreeBg} alt="hero background" className="w-full h-full" />
       </div>
 
       <div 
         className='
-          flex justify-center items-center flex-col 
+          flex justify-center items-center flex-col
           text-center mx-2 px-2 bg-primary
           relative -top-16 py-8 space-y-8
-          md:absolute md:right-[20px] md:top-1/2 md:transform md:-translate-y-1/2 md:w-[40%] lg:w-[40%] z-10'
+          md:absolute md:right-[20px] md:top-1/2 md:transform md:-translate-y-1/2 md:w-[40%] xl:w-[40%] z-10'
       >
         <div>
           <h1 className='text-2xl font-bold uppercase'>What We <span className="block">Represent</span></h1>
@@ -30,7 +30,7 @@ const Represent = () => {
             transportation to cleaning your new home or 
             office.
         </p>
-        <Button children="Learn More" styles="mt-4 w-[174px] h-[43px] md:w-[100px] md:h-[30px] lg:w-[174px] lg:h-[43px] text-[18px] md:text-[14px] lg:text-[18px] mt-8" />
+        <Button children="Learn More" styles="mt-4 w-[174px] h-[43px] md:w-[100px] md:h-[30px] xl:w-[174px] xl:h-[43px] text-[18px] md:text-[14px] xl:text-[18px] mt-8" />
       </div>
       
     </section>

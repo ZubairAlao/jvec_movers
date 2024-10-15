@@ -5,16 +5,16 @@ import Button from './Button'
 const CleaningServices = () => {
   return (
     <section className='bg-white text-black'>
-        <div className='py-12 container flex flex-col md:flex-row gap-8 justify-center items-center'>
+        <div className='py-12 container flex flex-col md:flex-row gap-8 justify-center md:justify-between items-center'>
 
-          <div className='flex flex-col justify-center items-center flex-1 text-center md:text-left'>
-            <h1 className='text-2xl md:text-4xl lg:text-5xl font-bold'>We Move and Clean</h1>
-            <p className='text-xl md:text-2xl lg:text-3xl mt-8'>Powered by MD 
+          <div className='flex flex-col justify-center md:items-start items-center flex-1 text-center md:text-left md:max-w-xl xl:w-full'>
+            <h1 className='text-2xl md:text-4xl xl:text-5xl font-bold'>We Move and Clean</h1>
+            <p className='text-xl md:text-2xl xl:text-3xl mt-8'>Powered by MD
               Environmental Services |
               Professional Cleaning
               Services
             </p>
-          <Button children="Learn More" styles="md:self-start mt-4 w-[174px] h-[43px] md:w-[100px] md:h-[30px] lg:w-[174px] lg:h-[43px] text-[18px] md:text-[14px] lg:text-[18px] mt-8" />
+          <Button children="Learn More" styles="md:self-start mt-4 w-[174px] h-[43px] md:w-[100px] md:h-[30px] xl:w-[174px] xl:h-[43px] text-[18px] md:text-[14px] xl:text-[18px] mt-8" />
           </div>
 
           <div>
