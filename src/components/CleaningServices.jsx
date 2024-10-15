@@ -1,11 +1,16 @@
 import React from 'react'
-import { arrowRight, cleaningServiceLogo, redLine } from '../assets'
+import { cleaningServiceLogo, redLine } from '../assets'
 import Button from './Button'
+import { motion } from 'framer-motion'
 
 const CleaningServices = () => {
   return (
     <section className='bg-white text-black'>
-        <div className='py-12 container flex flex-col md:flex-row gap-8 justify-center md:justify-between items-center'>
+        <motion.div className='py-12 container flex flex-col md:flex-row gap-8 justify-center md:justify-between items-center'
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: 'easeInOut' }}
+        >
 
           <div className='flex flex-col justify-center md:items-start items-center flex-1 text-center md:text-left md:max-w-xl xl:w-full'>
             <h1 className='text-2xl md:text-4xl xl:text-5xl font-bold'>We Move and Clean</h1>
@@ -20,7 +25,7 @@ const CleaningServices = () => {
           <div>
             <img src={cleaningServiceLogo} alt="cleaning service" className='w-[200px] h-fit' />
           </div>
-        </div>
+        </motion.div>
     </section>
   )
 }

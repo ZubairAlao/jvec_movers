@@ -1,15 +1,22 @@
 import React from 'react'
 import Button from './Button'
 import { ourTeamBg, ourTeamCustomer, ourTeamMoving, ourTeamSafetyProtocol } from '../assets'
+import { motion } from 'framer-motion'
 
 const OurTeam = () => {
   return (
-    <section className='relative'>
+    <motion.section className='relative'
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: 'easeInOut' }}
+    >
 
         <div className='bg-cover absolute inset-0 bg-center' style={{ backgroundImage: `url(${ourTeamBg})`}}>
         </div>
 
-        <div className='relative container bg-black text-white space-y-8 bg-opacity-90 py-12'>
+        <div 
+            className='relative container bg-black text-white space-y-8 bg-opacity-90 py-12'
+        >
             <div className='flex flex-col space-y-4 justify-center items-center'>
                 <h1 className="text-2xl md:text-4xl xl:text-5xl text-[#FF0000] text-center font-bold">OUR TEAM</h1>
                 <p className="text-lg md:text-2xl xl:text-3xl text-center font-semibold">HIGHLY TRAINED PROFESSIONALS IN</p>
@@ -47,7 +54,7 @@ const OurTeam = () => {
             </div>
         </div>
 
-    </section>
+    </motion.section>
   )
 }
 

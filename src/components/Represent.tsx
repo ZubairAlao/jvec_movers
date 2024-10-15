@@ -1,10 +1,16 @@
 import React from 'react'
-import { heroBg, stressFreeBg } from '../assets'
+import { stressFreeBg } from '../assets'
 import Button from './Button'
+import { motion } from 'framer-motion'
 
 const Represent = () => {
   return (
-    <section className='relative md:flex flex-row text-white py-12 container bg-dimWhite'>
+    <motion.section 
+      className='relative md:flex flex-row text-white py-12 container bg-dimWhite'
+        initial={{ opacity: 0, y: 150 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: 'easeInOut' }}
+    >
       <div className="w-full md:w-3/4 md:h-screen">
         <img src={stressFreeBg} alt="hero background" className="w-full h-full" />
       </div>
@@ -33,7 +39,7 @@ const Represent = () => {
         <Button children="Learn More" styles="mt-4 w-[174px] h-[43px] md:w-[100px] md:h-[30px] xl:w-[174px] xl:h-[43px] text-[18px] md:text-[14px] xl:text-[18px] mt-8" />
       </div>
       
-    </section>
+    </motion.section>
   )
 }
 

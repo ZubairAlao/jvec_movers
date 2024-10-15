@@ -3,11 +3,16 @@ import { geography } from '../assets'
 import { ourServices } from '../constant'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { motion } from 'framer-motion';
 
 const GeographicCoverage = () => {
   return (
     <section className='bg-white text-black'>
-        <div className='py-12 container space-y-8'>
+        <motion.div className='py-12 container space-y-8'
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: 'easeInOut' }}
+        >
             <h1 className='xl:text-5xl md:text-4xl text-2xl uppercase text-center font-bold'>Geographic Coverage</h1>
             <div className='relative flex items-center justify-center'>
                 <p className="text-xs md:text-base xl:text-lg font-semibold absolute top-10 p-2  md:p-4 shadow-md rounded-md bg-white"><span className='uppercase'>Local:</span> Serving the Tri-Cities area and other cities in Tennessee</p>
@@ -24,7 +29,7 @@ const GeographicCoverage = () => {
                         width: "100%",
                         rewind: true,
                         autoplay: "true",
-                        perPage: 2,
+                        perPage: 3,
                         perMove: "1",
                         gap: "1rem",
                         // height: "10rem",
@@ -32,6 +37,14 @@ const GeographicCoverage = () => {
                         rewindSpeed: "3000",
                         // arrows: "false",
                         pagination: "false",
+                        breakpoints: {
+                            767: {
+                              perPage: 2,
+                            },
+                            640: {
+                              perPage: 1,
+                            },
+                          },
                     }}
                 >
                     {ourServices.map((service) => (
@@ -54,7 +67,7 @@ const GeographicCoverage = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     </section>
   )
 }

@@ -3,11 +3,16 @@ import { blogPosts } from '../constant'
 import Button from './Button'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css';
+import { motion } from 'framer-motion';
 
 const Blog = () => {
   return (
     <section className='bg-bg-primary text-white'>
-        <div className='py-12 container flex justify-center flex-col  xl:max-w-6xl'>
+        <motion.div className='py-12 container flex justify-center flex-col  xl:max-w-6xl'
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: 'easeInOut' }}
+        >
             <div className="flex justify-center items-center flex-col">
                 <h1 className='text-2xl md:text-4xl xl:text-5xl text-center font-bold'>The Smooth Move Blog</h1>
                 <h3 className='text-lg md:text-2xl xl:text-3xl text-center font-bold max-w-2xl'>Moving and relocation tips and everything in between</h3>
@@ -60,7 +65,7 @@ const Blog = () => {
                     </SplideSlide>
                 ))}
             </Splide>
-        </div>
+        </motion.div>
     </section>
   )
 }
