@@ -5,16 +5,20 @@ import { motion } from 'framer-motion'
 
 const OurTeam = () => {
   return (
-    <motion.section className='relative'
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: 'easeInOut' }}
-    >
+    <section className='relative bg-white'>
 
-        <div className='bg-cover absolute inset-0 bg-center' style={{ backgroundImage: `url(${ourTeamBg})`}}>
-        </div>
+        <motion.div 
+            className='bg-cover absolute inset-0 bg-center' style={{ backgroundImage: `url(${ourTeamBg})`}}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: 'easeInOut' }}
+        >
+        </motion.div>
 
-        <div 
+        <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: 'easeInOut' }}
             className='relative container bg-black text-white space-y-8 bg-opacity-90 py-12'
         >
             <div className='flex flex-col space-y-4 justify-center items-center'>
@@ -52,9 +56,9 @@ const OurTeam = () => {
                 </p>
                 <Button children="Learn More" styles="mt-4 w-[174px] h-[43px] md:w-[100px] md:h-[30px] xl:w-[174px] xl:h-[43px] text-[18px] md:text-[14px] xl:text-[18px] mt-8" />
             </div>
-        </div>
+        </motion.div>
 
-    </motion.section>
+    </section>
   )
 }
 
