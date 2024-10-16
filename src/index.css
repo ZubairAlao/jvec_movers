@@ -5,6 +5,9 @@
 body {
     background-color: #282B2E;
 }
+header {
+    background-color: #282B2E;
+}
 
 @layer {
 
